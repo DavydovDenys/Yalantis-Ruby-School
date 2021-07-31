@@ -1,0 +1,17 @@
+<%= form_with(model: @courier, local: true) do |f| %>
+  <% if @courier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@courier.errors.count, "error") %> prohibited this courier from being saved:</h2>
+
+      <ul>
+      <% @courier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :name, placeholder: true, required: true %>
+  <%= f.text_field :email, placeholder: true, required: true%>
+  <%= f.button :Submit %>
+<% end %>

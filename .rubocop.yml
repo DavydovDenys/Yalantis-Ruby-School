@@ -1,0 +1,22 @@
+AllCops:
+  TargetRubyVersion: 2.7.2
+  NewCops: enable
+  Exclude:
+    - "db/**/*"
+    - "bin/*"
+    - "config/**/*"
+    - "spec/**/*"
+    - "config/environments/*"
+    - "vendor/**/*"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "Rakefile"
+    - "Guardfile"
+    - "node_modules/**/*"
+    - "config.ru"
+    - "app/mailers"
+    - "app/jobs"
+    - "app/helpers"
+
+Style/Documentation:
+  Enabled: false

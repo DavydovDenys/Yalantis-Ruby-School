@@ -1,0 +1,27 @@
+<h2>Add a package:</h2>
+  <%= form_with(model: [ courier, courier.packages.build ]) do |form| %>
+
+    <% if courier.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(courier.errors.count, "error") %> prohibited this package from being saved:</h2>
+
+        <ul>
+        <% courier.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= form.label :tracking_number %><br>
+      <%= form.number_field :tracking_number %>
+    </p>
+    <p>
+      <%= form.label :delivery_status %><br>
+      <%= form.check_box :delivery_status %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>

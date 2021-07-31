@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Couriers</h1>
+
+<p><%= link_to 'New', new_courier_path %></p>
+
+<%= render partial: 'couriers/all', collection: @couriers, as: :courier %>

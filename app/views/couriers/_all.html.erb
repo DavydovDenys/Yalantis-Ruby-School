@@ -1,0 +1,14 @@
+
+  <div class="courier-<%= courier.id %>">
+    <strong>Id:</strong>
+    <%= courier.id %><br />
+    <strong>Name:</strong>
+    <%= courier.name %><br />
+    <strong>Email:</strong>
+    <%= courier.email %></td>
+    <br />
+    <%= link_to 'Show', courier_path(courier) %>
+    <%= link_to 'Edit', edit_courier_path(courier) %>
+    <%= link_to 'Delete', courier_path(courier), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<br/>
